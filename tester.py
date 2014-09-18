@@ -36,7 +36,7 @@ if __name__ == "__main__":
 			t = timeit.Timer("s.intersection(t)", getSetup(et, es))
 			timed = t.timeit(repFreq)
 			timed_avg = μSecs(timed/repFreq)
-			print("Time for "+"{:,}".format(repFreq)+" runs: "+fmt.format(timed)+" s\t(Avg: "+fmt.format(timed_avg)+"μs)")
+			print("Time for "+"{:,}".format(repFreq)+" runs: "+fmt.format(timed)+" s\t(Avg: "+fmt.format(timed_avg)+" μs)")
 			
 			print("Repeating "+str(numTests)+" times...")
 			r = t.repeat(numTests, repFreq)
