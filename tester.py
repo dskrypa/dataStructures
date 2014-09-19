@@ -25,7 +25,7 @@ if __name__ == "__main__":
 	exps = {3,4,5,6}
 	repFreq = 1000
 	numTests = 3
-	fmt = "{:4,f}"
+	fmt = "{:,.4f}"
 	
 	for et in exps:
 		et = pow(10, et)
@@ -44,7 +44,7 @@ if __name__ == "__main__":
 			repMin_avg = μSecs(repMin/repFreq)
 			repMax = max(r)
 			repMax_avg = μSecs(repMax/repFreq)
-			print("Min run time: "+fmt.format(repMin)+"s\t(Avg: "+fmt.format(repMin_avg)+" μs)")
-			print("Max run time: "+fmt.format(repMax)+"s\t(Avg: "+fmt.format(repMax_avg)+" μs)")
+			print("Min run time: "+fmt.format(repMin)+" s\t(Avg: "+fmt.format(repMin_avg)+" μs)")
+			print("Max run time: "+fmt.format(repMax)+" s\t(Avg: "+fmt.format(repMax_avg)+" μs)")
 			print("----------------------------------------")
 #/main

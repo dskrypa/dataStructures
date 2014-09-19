@@ -4,14 +4,10 @@ Date: 2014.09.18
 '''
 import timeit
 
-def μSecs(secs):
-	return secs*1000000
-#/μSecs
-
 if __name__ == "__main__":
 	repFreq = 1000
 	numTests = 3
-	fmt = "{:4,f}"
+	fmt = "{:,.4f}"
 	
 	stp = '''
 import random
@@ -30,9 +26,9 @@ for x in range(1000):
 	
 	r = t.repeat(3, repFreq)
 	repMin = min(r)
-	repMin_avg = μSecs(repMin/repFreq)
+	repMin_avg = repMin/repFreq*1000000
 	repMax = max(r)
-	repMax_avg = μSecs(repMax/repFreq)
+	repMax_avg = (repMax/repFreq)*1000000
 	print("Min run time: "+fmt.format(repMin)+"s\t(Avg: "+fmt.format(repMin_avg)+" μs)")
 	print("Max run time: "+fmt.format(repMax)+"s\t(Avg: "+fmt.format(repMax_avg)+" μs)")
 #/main
