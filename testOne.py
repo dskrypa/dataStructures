@@ -7,8 +7,6 @@ import timeit
 if __name__ == "__main__":
 	repFreq = 1000
 	numTests = 3
-	fmt = "{:,.4f}"
-	
 	stp = '''
 import random
 t = set()
@@ -29,6 +27,6 @@ for x in range(1000):
 	repMin_avg = repMin/repFreq*1000000
 	repMax = max(r)
 	repMax_avg = (repMax/repFreq)*1000000
-	print("Min run time: "+fmt.format(repMin)+"s\t(Avg: "+fmt.format(repMin_avg)+" μs)")
-	print("Max run time: "+fmt.format(repMax)+"s\t(Avg: "+fmt.format(repMax_avg)+" μs)")
+	print("Min run time: "+str(repMin)+"s\t(Avg: "+str(repMin_avg)+" microseconds)")
+	print("Max run time: "+str(repMax)+"s\t(Avg: "+str(repMax_avg)+" microseconds)")
 #/main
